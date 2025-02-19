@@ -201,5 +201,24 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 請下載 Homework5.jar 檔案。下載完成後，您只需點擊該檔案即可開啟程式。
 
 ### 4.使用畫面
+首面
+
+![My Image](images/001-首頁.jpg)
+
+訂單主頁 
+
+![My Image](images/02.jpg)
+
+新增訂單
+
+![My Image](images/03.jpg)
+
+訂單管理
+
+![My Image](images/04.jpg)
+
+編輯訂單
+
+![My Image](images/05.jpg)
 
 ### 以上是專案說明
