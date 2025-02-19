@@ -87,11 +87,14 @@ src 目錄檔案說明如下:
 MemberMainUI.java → 會員主介面
 MemberReadDialog.java → 會員資料詳細資訊的彈窗
 MemberReadUI.java → 會員資料查詢介面
+
 📁 employ（員工管理）
 EmployManagerUI.java → 員工管理主介面
 EmployUpdateUI.java → 員工資訊編輯介面
+
 📁 member（會員管理）
 MemberManagerUI.java → 會員管理介面（可能包含新增、刪除、修改功能）
+
 📁 porder（訂單管理）
 PorderCreate1.java → 訂單建立介面（可能是第一步）
 PorderCreate2.java → 訂單建立介面（第二步）
@@ -100,48 +103,53 @@ PorderDeleteUI.java → 訂單刪除介面
 PorderReadDialog.java → 訂單詳細資訊的彈窗
 PorderReadUI.java → 訂單查詢介面
 PorderUpdateUI.java → 訂單修改介面
+
 📁 portal（登入、註冊、主選單）
 LoginUI.java → 登入介面
 MainUI.java → 系統主介面
 MemberLoginUI.java → 會員登入介面
 PortalUI.java → 入口介面（可能是登入或主選單）
 RegisterUI.java → 註冊介面
+
 📁 product（產品管理）
 ProductManagerUI.java → 產品管理介面
+
 📂 dao（資料存取層 - 直接與 MySQL 互動）
 負責對 MySQL 進行 CRUD（新增、查詢、更新、刪除） 操作。
-
 EmployDao.java → 員工資料存取介面
 MemberDao.java → 會員資料存取介面
 PorderDao.java → 訂單資料存取介面
 PorderSummaryDao.java → 訂單摘要查詢
 ProductDao.java → 產品資料存取介面
+
 📁 impl（DAO 具體實作）
 EmployDaoImpl.java → 員工 DAO 實作
 MemberDaoImpl.java → 會員 DAO 實作
 PorderDaoImpl.java → 訂單 DAO 實作
 PorderSummaryDaoImpl.java → 訂單摘要 DAO 實作
 ProductDaoImpl.java → 產品 DAO 實作
+
 📂 model（數據模型 - 定義 POJO 類別）
 對應 MySQL 的資料表，每個類別代表一個 表的結構。
-
 Employ.java → 員工類別（對應 employ 資料表）
 Member.java → 會員類別（對應 member 資料表）
 Porder.java → 訂單類別（對應 porder 資料表）
 PorderSummary.java → 訂單摘要類別（用於統計）
 Product.java → 產品類別（對應 product 資料表）
+
 📂 service（業務邏輯層 - 處理 DAO 操作）
 負責調用 DAO，執行 交易管理（Transaction Management） 及 商業邏輯。
-
 EmployService.java → 員工業務邏輯
 MemberService.java → 會員業務邏輯
 PorderService.java → 訂單業務邏輯
 ProductService.java → 產品業務邏輯
+
 📁 impl（Service 具體實作）
 EmployServiceImpl.java → 員工 Service 實作
 MemberServiceImpl.java → 會員 Service 實作
 PorderServiceImpl.java → 訂單 Service 實作
 ProductServiceImpl.java → 產品 Service 實作
+
 📂 util（工具類別 - 提供共用函式）
 DbConnection.java → MySQL 連線工具類
 Tool.java → 其他工具函式，例如 檔案存取、格式轉換
