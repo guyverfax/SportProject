@@ -324,6 +324,7 @@ public class MainUI extends JFrame {
         	public void actionPerformed(ActionEvent e) {
         		EmployChart frame=new EmployChart();
         		frame.setVisible(true);
+        		dispose();
         	}
         });
         btnByEmploy.setFont(new Font("微軟正黑體", Font.BOLD, 12));
@@ -335,6 +336,7 @@ public class MainUI extends JFrame {
         	public void actionPerformed(ActionEvent e) {
         		ProductChart frame=new ProductChart();
         		frame.setVisible(true);
+        		dispose();
         	}
         });
         btnByProduct.setFont(new Font("微軟正黑體", Font.BOLD, 12));
@@ -346,6 +348,7 @@ public class MainUI extends JFrame {
         	public void actionPerformed(ActionEvent e) {
         		MemberChart frame=new MemberChart();
         		frame.setVisible(true);
+        		dispose();
         	}
         });
         btnByMember.setFont(new Font("微軟正黑體", Font.BOLD, 12));
