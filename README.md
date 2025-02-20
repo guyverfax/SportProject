@@ -10,7 +10,13 @@
 ## 程式設計
 系統採用 MVC（Model-View-Controller） 設計模式，以確保架構清晰、可維護性高。此外，系統實作 DAO（Data Access Object）層 負責數據存取，並透過 Service 層 處理業務邏輯。後端使用 MySQL 作為資料庫，確保數據管理的穩定性與效率。
 
-## 目錄結構
+## 主頁的檔案說明如下
+SQL: sql 檔 <br>
+images: 使用畫面抓圖 <br>
+src: 程式檔 <br>
+Homework5.jar: 執行檔 <br>
+
+## src 目錄結構
 ```src
 ├─controller
 │  ├─customer
@@ -166,9 +172,6 @@ Service（業務邏輯層） → service 資料夾（處理 DAO 操作及交易�
 Util（工具類） → util 資料夾（提供 MySQL 連線與工具函式）。
 
 ```
-## 主頁的檔案說明如下
-Homework5.jar 是執行檔
-SQL目錄存放 MySQL Schema 和 Table
 
 ## 使用手冊
 ### 1.匯入 MySQL Schema 和 Table
