@@ -212,7 +212,7 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 
 介面架構
 
-![My Image](images/002介面架構.jpg)
+![My Image](images/002-介面架構.jpg)
 
 
 首頁
@@ -234,6 +234,10 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 ![My Image](images/111-員工-新增訂單2.jpg)
 
 ![My Image](images/111-員工-新增訂單3.jpg)
+
+![My Image](images/111-員工-新增訂單4.jpg)
+
+![My Image](images/111-員工-新增訂單5.jpg)
 
 員工-查詢訂單 
 
