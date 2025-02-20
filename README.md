@@ -235,6 +235,10 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 
 ![My Image](images/111-員工-新增訂單3.jpg)
 
+![My Image](images/111-員工-新增訂單4.jpg)
+
+![My Image](images/111-員工-新增訂單5.jpg)
+
 員工-查詢訂單 
 
 ![My Image](images/112-員工-查詢訂單1.jpg)
