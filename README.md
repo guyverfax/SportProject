@@ -173,7 +173,7 @@ SQL目錄存放 MySQL Schema 和 Table
 ## 使用手冊
 ### 1.匯入 MySQL Schema 和 Table
 
-請下載 fruit_member.sql 和 fruit_porder.sql，並按照以下步驟將其匯入 MySQL：
+請下載 SQL 目錄的檔案，並按照以下步驟將其匯入 MySQL：
 
 打開 MySQL Workbench。
 
