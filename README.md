@@ -245,6 +245,8 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 
 ![My Image](images/112-員工-查詢訂單2.jpg)
 
+![My Image](images/112-員工-查詢訂單3.jpg)
+
 員工-編輯訂單 
 
 ![My Image](images/113-員工-編輯訂單1.jpg)
@@ -267,6 +269,13 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 
 ![My Image](images/117-員工-員工管理.jpg)
 
+員工-報表管理
+
+![My Image](images/118-員工-報表管理1.jpg)
+
+![My Image](images/118-員工-報表管理2.jpg)
+
+![My Image](images/118-員工-報表管理3.jpg)
 
 客戶登入
 
@@ -279,6 +288,8 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 客戶-訂單管理
 
 ![My Image](images/203-客戶查詢訂單.jpg)
+
+![My Image](images/203-客戶查詢訂單2.jpg)
 
 
 ### 以上是專案說明
