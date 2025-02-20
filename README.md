@@ -102,10 +102,10 @@ EmployManagerUI.java → 員工管理主介面
 EmployUpdateUI.java → 員工資訊編輯介面
 
 📁 member（會員管理）
-MemberManagerUI.java → 會員管理介面（可能包含新增、刪除、修改功能）
+MemberManagerUI.java → 會員管理介面（包含新增、刪除、修改功能）
 
 📁 porder（訂單管理）
-PorderCreate1.java → 訂單建立介面（可能是第一步）
+PorderCreate1.java → 訂單建立介面（第一步）
 PorderCreate2.java → 訂單建立介面（第二步）
 PorderCreate3.java → 訂單建立介面（最終步驟）
 PorderDeleteUI.java → 訂單刪除介面
@@ -117,7 +117,7 @@ PorderUpdateUI.java → 訂單修改介面
 LoginUI.java → 登入介面
 MainUI.java → 系統主介面
 MemberLoginUI.java → 會員登入介面
-PortalUI.java → 入口介面（可能是登入或主選單）
+PortalUI.java → 入口介面（登入首頁）
 RegisterUI.java → 註冊介面
 
 📁 product（產品管理）
