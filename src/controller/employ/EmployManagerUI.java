@@ -20,6 +20,8 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -149,7 +151,7 @@ public class EmployManagerUI extends JFrame {
         middlePanel.setLayout(new BorderLayout());
         getContentPane().add(middlePanel);
 
-        tableModel = new DefaultTableModel(new String[]{"員工編號", "員工名字", "員工帳號", "員工密碼", "員工角色"}, 0){
+        tableModel = new DefaultTableModel(new String[]{"員工編號", "員工名字", "員工帳號", "員工密碼(加密)", "員工角色"}, 0){
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
@@ -331,7 +333,7 @@ public class EmployManagerUI extends JFrame {
         tableModel.setRowCount(0); // 清空表格
         List<Employ> employs = employDao.readAll();
         for (Employ employ : employs) {
-            tableModel.addRow(new Object[]{employ.getEmployno(), employ.getName(), employ.getUsername(), employ.getPassword(), employ.getRole()});
+            tableModel.addRow(new Object[]{employ.getEmployno(), employ.getName(), employ.getUsername(), hashPassword(employ.getPassword()), employ.getRole()});
         }
     }
 
@@ -356,4 +358,20 @@ public class EmployManagerUI extends JFrame {
         String regex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{1,8}$";
         return password.matches(regex);
     }
+    
+   // 加密密碼 (SHA-256)
+    private String hashPassword(String password) {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hashedBytes = digest.digest(password.getBytes());
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashedBytes) {
+                sb.append(String.format("%02x", b));
+            }
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("無法加密密碼", e);
+        }
+    }
+    
 }
