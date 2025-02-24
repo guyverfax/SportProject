@@ -285,6 +285,8 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 
 ![My Image](images/118-員工-報表管理4.jpg)
 
+![My Image](images/118-員工-報表管理5.jpg)
+
 客戶登入
 
 ![My Image](images/201-客戶登入.jpg)
