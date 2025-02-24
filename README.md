@@ -216,10 +216,9 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 
 ### 4.使用畫面
 
-介面架構
+介面架
 
 ![My Image](images/002-介面架構.jpg)
-
 
 首頁
 
@@ -284,6 +283,8 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.20+9-LTS-256, mixed mode)
 ![My Image](images/118-員工-報表管理3.jpg)
 
 ![My Image](images/118-員工-報表管理4.jpg)
+
+![My Image](images/118-員工-報表管理5.jpg)
 
 客戶登入
 
