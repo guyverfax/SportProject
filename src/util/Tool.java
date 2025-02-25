@@ -91,6 +91,15 @@ public class Tool {
         return "O" + timestamp + String.format("%02d", sequence);
     }
     
+    // 自動產生供應號碼
+    public static synchronized String generatePurchaseOrderNumber() {
+    	int sequence = 0;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+        String timestamp = sdf.format(new Date());
+        sequence++;
+        return "P" + timestamp + String.format("%02d", sequence);
+    }
+    
     public static void saveOrderModel(DefaultTableModel tableModel, String filePath) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
             oos.writeObject(tableModel);
@@ -115,14 +124,19 @@ public class Tool {
         return password.matches(regex);
     }
     
-	/*
-    if (!isValidPassword(password)) {
-        JOptionPane.showMessageDialog(RegisterUI.this, "密碼必須包含至少1個英文、1個數字和1個符號，且長度不超過8個字！", "錯誤", JOptionPane.ERROR_MESSAGE);
-        return;
+	public boolean isValidInteger(String text) {
+        if (text == null || text.trim().isEmpty()) {
+            return false;
+        }
+        try {
+        	int number = Integer.parseInt(text.trim());
+            return number > 0; // 只有大於 0 才算有效的正整數
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
-    */
-    
-	//JTable table.getColumnModel().getColumn(0).setPreferredWidth(110);
+	
+
 	//find keyword in JTable
 	public boolean isExistOnJtable(DefaultTableModel model, int index, String keyword)
 	{
@@ -145,56 +159,4 @@ public class Tool {
         }
     	return totalAmount;
     }
-	
-	/*load Data from MySQL
-	 * private void loadPorderData() {
-        tableModel.setRowCount(0);
-        if ("Admin".equals(loginEmployRole)) {
-            allPorders = pordersummaryDao.readAll();
-        } else {
-            allPorders = pordersummaryDao.readAllByEmployno(loingEmployno);
-        }
-        for (PorderSummary p : allPorders) {
-            tableModel.addRow(new Object[]{p.getPorderno(), p.getMemberno(), p.getMembername(), p.getEmployno(), p.getEmployname(), p.getProducts(), p.getTotalprice()});
-        }
-     }
-	*/
-    
-	/*
-	 * private void searchPorder() {
-        String keyword = txtSearch.getText().trim().toLowerCase();
-        if (keyword.isEmpty()) {
-            loadPorderData(); // 如果沒輸入則顯示全部
-            return;
-        }
-
-        List<PorderSummary> filteredPorders = allPorders.stream()
-                .filter(p -> p.getPorderno().toLowerCase().contains(keyword) ||
-                		     p.getMemberno().toLowerCase().contains(keyword) ||
-                             p.getMembername().toLowerCase().contains(keyword) ||
-                             p.getEmployno().toLowerCase().contains(keyword) ||
-                             p.getProducts().toLowerCase().contains(keyword) ||
-                             String.valueOf(p.getTotalprice()).toLowerCase().contains(keyword) ||
-                             p.getEmployname().toLowerCase().contains(keyword))
-                .collect(Collectors.toList());
-
-        tableModel.setRowCount(0);
-        for (PorderSummary p : filteredPorders) {
-            tableModel.addRow(new Object[]{p.getPorderno(), p.getMemberno(), p.getMembername(), p.getEmployno(), p.getEmployname(), p.getProducts(), p.getTotalprice()});
-        }
-    }
-	*/
-	
-	/*
-	 * JComboBox<String> jcbProduct = new JComboBox<>(productDao.readByProductnoAndProductname());
-       JComboBox<Integer> jcbAmount = new JComboBox<>(new Integer[] {1,2,3,4,5,6,7,8,9,10});
-    */
-	
-	/*
-    //orderModel 存 String, String, Integer(int->Integer, Integer, Integer(int), 
-		        orderModel.addRow(new Object[] {
-		        	selectedProductno, selectedProductname, selectedProductprice, 
-		        	amount, selectedProductprice*amount
-		        });
-	 */
 }
